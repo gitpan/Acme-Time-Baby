@@ -25,6 +25,7 @@ DESCRIPTION
 
           en             English (this is the default)
           br             Brazilian Portuguese.
+          ceb            Cebuano (Filipine dialect)
           de             German.
           du             Dutch.
           es             Spanish.
@@ -79,7 +80,16 @@ SEE ALSO
     <http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 
 HISTORY
-        $Log: Baby.pm,v $
+        $Log: README,v $
+        Revision 1.12  2003/11/24 21:28:06  abigail
+        *** empty log message ***
+
+        Revision 2.105  2003/11/24 21:27:01  abigail
+        And documented it.
+
+        Revision 2.104  2003/11/24 21:24:24  abigail
+        Added Cebuano (Arjan de Mol)
+
         Revision 2.103  2003/02/25 10:54:06  abigail
         Another German patch (Philip Newton)
 
@@ -148,7 +158,7 @@ HISTORY
         Initial revision
 
 LICENSE
-    This program is copyright 2002 by Abigail.
+    This program is copyright 2002 - 2003 by Abigail.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the

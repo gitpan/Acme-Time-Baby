@@ -1,9 +1,15 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 2.103 2003/02/25 10:54:06 abigail Exp $
+# $Id: Baby.pm,v 2.105 2003/11/24 21:27:01 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 2.105  2003/11/24 21:27:01  abigail
+# And documented it.
+#
+# Revision 2.104  2003/11/24 21:24:24  abigail
+# Added Cebuano (Arjan de Mol)
+#
 # Revision 2.103  2003/02/25 10:54:06  abigail
 # Another German patch (Philip Newton)
 #
@@ -78,7 +84,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 2.103 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 2.105 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -90,6 +96,12 @@ my %languages = (
                                      sete oito nove dez onze doze/],
                   format  => "O ponteiro grande está no %s " .
                              "e o ponteiro pequeno está no %s"},
+
+    'ceb'     => {numbers => [qw /usa duha tulo upat lima unom pito
+                                  walo siyam napulo/,
+                                 "napulo'g usa", "napulo'g duha"],
+                  format  => "Ang dako nga kamut naa sa %s " .
+                             "ang gamay nga kamut naa sa %s"},
 
     'de'      => {numbers => [qw /Eins Zwei Drei Vier Fünf Sechs Sieben
                                        Acht Neun Zehn Elf Zwölf/],
@@ -236,6 +248,7 @@ currently supported:
 
   en             English (this is the default)
   br             Brazilian Portuguese.
+  ceb            Cebuano (Filipine dialect)
   de             German.
   du             Dutch.
   es             Spanish.
@@ -300,6 +313,12 @@ L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 2.105  2003/11/24 21:27:01  abigail
+    And documented it.
+
+    Revision 2.104  2003/11/24 21:24:24  abigail
+    Added Cebuano (Arjan de Mol)
+
     Revision 2.103  2003/02/25 10:54:06  abigail
     Another German patch (Philip Newton)
 
@@ -369,7 +388,7 @@ L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 
 =head1 LICENSE
 
-This program is copyright 2002 by Abigail.
+This program is copyright 2002 - 2003 by Abigail.
  
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
