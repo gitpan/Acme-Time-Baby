@@ -1,9 +1,24 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.7 2002/05/15 11:37:39 abigail Exp abigail $
+# $Id: Baby.pm,v 1.10 2002/08/20 14:40:26 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 1.10  2002/08/20 14:40:26  abigail
+# Documented new language (Swedish).
+# Fixed email address.
+#
+# Revision 1.9  2002/08/20 14:34:52  abigail
+# Fixed the German:
+#    + capitalized the numbers
+#    + fixed the gender of the numbers.
+# (Torsten Hofmann and Andre Bonhote)
+#
+# Added support for Swedish (cpan #718)
+#
+# Revision 1.8  2002/08/20 13:58:08  abigail
+# Moved from RCS to CVS.
+#
 # Revision 1.7  2002/05/15 11:37:39  abigail
 # Fixed regex extracting version number from RCS Revision line.
 # (Tim Heaney)
@@ -41,7 +56,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.7 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 1.10 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -49,10 +64,10 @@ my %languages = (
                   format  => "The big hand is on the %s " .
                              "and the little hand is on the %s"},
 
-    'de'      => {numbers => [qw /eins zwei drie vier fünf sechs sieben
-                                       acht neun zehn elf zwölf/],
-                  format  => "Der grosse Zeiger ist auf die %s " .
-                             "und der kleine Zeiger ist auf die %s"},
+    'de'      => {numbers => [qw /Eins Zwei Drie Vier Fünf Sechs Sieben
+                                       Acht Neun Zehn Elf Zwölf/],
+                  format  => "Der grosse Zeiger ist auf der %s " .
+                             "und der kleine Zeiger ist auf der %s"},
 
     'du'      => {numbers => [qw /een twee drie vier vijf zes zeven
                                       acht negen tien elf twaalf/],
@@ -75,6 +90,11 @@ my %languages = (
                                      åtte ni ti elleve tolv/],
                   format  => "Den store viseren er på %s " .
                              "og den lille viseren er på %s"},
+
+    'se'      => {numbers => [qw /ett två tre fyra fem sex sju
+                                      åtta nio tio elva tolv/],
+                  format  => "Den stora visaren är på %s " .
+                             "och den lilla visaren är på %s"},
 
     'swedish chef'
               => {numbers => [qw /one tvu three ffuoor ffeefe six
@@ -183,8 +203,9 @@ options can be passed:
 The language the time should be told in. The following languages are
 currently supported: C<en> (for English), C<de> (for German), C<du>
 (for Dutch), C<fr> (for French), C<it> (for Italian), C<no> (for
-Norwegian), C<swedish chef> (for Swedish Chef like time) and C<warez>
-(for l44+ babies).  If no language argument is given, English is used.
+Norwegian), C<se> (for Swedish), C<swedish chef> (for Swedish Chef
+like time) and C<warez> (for l44+ babies).
+If no language argument is given, English is used.
 
 Note that German and Norwegian use accented letters. The returned 
 sentences are correct for an ISO 8859-1 platform.
@@ -229,11 +250,26 @@ Support for more languages.
 
 =head1 AUTHOR
 
-Abigail, I<abigail@foad.org>.
+Abigail, I<acme-time-baby@abigail.nl>.
 
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.10  2002/08/20 14:40:26  abigail
+    Documented new language (Swedish).
+    Fixed email address.
+
+    Revision 1.9  2002/08/20 14:34:52  abigail
+    Fixed the German:
+       + capitalized the numbers
+       + fixed the gender of the numbers.
+    (Torsten Hofmann and Andre Bonhote)
+
+    Added support for Swedish (cpan #718)
+
+    Revision 1.8  2002/08/20 13:58:08  abigail
+    Moved from RCS to CVS.
+
     Revision 1.7  2002/05/15 11:37:39  abigail
     Fixed regex extracting version number from RCS Revision line.
     (Tim Heaney)

@@ -8,20 +8,20 @@
 use Test;
 use strict;
 BEGIN { plan tests => 1 + 24 * 60 };
-use Acme::Time::Baby language => 'de';
+use Acme::Time::Baby language => 'se';
 ok(1); # If we made it this far, we're ok.
 
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /Eins Zwei Drie Vier Fünf Sechs Sieben
-                                   Acht Neun Zehn Elf Zwölf/;
+my %numbers = map {$_ => ++$i} qw /ett två tre fyra fem sex sju
+                                   åtta nio tio elva tolv/;
 
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /grosse Zeiger ist auf der (\S+)/;
-        my ($little) = $r =~ /kleine Zeiger ist auf der (\S+)/;
+        my ($big)    = $r =~ /stora visaren är på (\S+)/;
+        my ($little) = $r =~ /lilla visaren är på (\S+)/;
 
         if (!defined $big || !defined $little) {
             ok (0);
