@@ -1,9 +1,13 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.4 2002/04/26 12:28:56 abigail Exp abigail $
+# $Id: Baby.pm,v 1.5 2002/04/26 16:10:49 abigail Exp abigail $
 #
 # $Log: Baby.pm,v $
+# Revision 1.5  2002/04/26 16:10:49  abigail
+# Added INSTALLATION topic to the POD, so we can do
+# pod2text Baby.pm > README
+#
 # Revision 1.4  2002/04/26 12:28:56  abigail
 # Added support for 'Swedish chef' and 'Warez' languages.
 #
@@ -26,7 +30,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.4 $ =~ /([\d.+])/;
+($VERSION)  = q $Revision: 1.5 $ =~ /([\d.+])/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -193,6 +197,10 @@ Abigail, I<abigail@foad.org>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.5  2002/04/26 16:10:49  abigail
+    Added INSTALLATION topic to the POD, so we can do
+    pod2text Baby.pm > README
+
     Revision 1.4  2002/04/26 12:28:56  abigail
     Added support for 'Swedish chef' and 'Warez' languages.
 
@@ -229,5 +237,14 @@ THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT
 OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE. 
+
+=head1 INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
 
 =cut

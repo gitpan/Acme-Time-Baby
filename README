@@ -1,35 +1,113 @@
-Acme/Time/BabyTalk version 0.01
-===============================
+NAME
+    Acme::Time::Baby -- Tell time little children can understand
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+SYNOPSIS
+        use Acme::Time::Baby;
+        print babytime;           #  Prints current time.
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+        use Acme::Time::Baby language => 'du';
+        print babytime "10:15";   #  Prints a quarter past ten in a way
+                                  #  little Dutch children can understand.
+
+DESCRIPTION
+    Using this module gives you the function "babytime", which will return
+    the time in the form The big hand is on the ten and the little hand is
+    on the three. If no argument to "babytime" is given, the current time is
+    used, otherwise a time of the form *hh:mm* can be passed. Both 12 and 24
+    hour clocks are supported.
+
+    When using the module, various options can be given. The following
+    options can be passed:
+
+    language LANG
+        The language the time should be told in. Only four languages are
+        currently supported, "en" (for English), "du" (for Dutch), "swedish
+        chef" (for Swedish Chef like time) and "warez" (for l44+ babies). If
+        no language argument is given, English is used.
+
+    format STRING
+        This is the format used to represent the time. It will be passed to
+        "sprintf", and it should have two "%s" formatting codes. The other
+        two arguments to "sprintf" are the position of the minute hand (the
+        big hand) and the hour hand (the little hand). If you have perl 5.8
+        or above, you could use "%2$s" and "%1$s" to reverse the order.
+
+    number ARRAYREF
+        An array with the names of the numbers one to twelve, to be used in
+        the formatted time.
+
+    noimport EXPR
+        By default, the sub "babytime" will be exported to the calling
+        package. If for some reason the calling package does not want to
+        import the sub, there are two ways to prevent this. Either use "use
+        Acme::Time::Baby ()", which will prevent "Acme::Time::Baby::import"
+        to be called, or pass "noimport" followed by a true value as
+        arguments to the "use" statement.
+
+PACKAGE NAME
+    It has been said this package should be named 'Acme::Time::Toddler',
+    because it's the language toddlers speak, and not babies.
+
+    However, the idea of this package is based on an X application the
+    author saw more than 10 years before this package was written. It would
+    display a clock, telling the current time, in a myriad of languages. One
+    of the languages was *babytalk*, and used a language very similar to the
+    one in this package. Hence the name of this package.
+
+TODO
+    Support for more languages.
+
+AUTHOR
+    Abigail, *abigail@foad.org*.
+
+HISTORY
+        $Log: Baby.pm,v $
+        Revision 1.5  2002/04/26 16:10:49  abigail
+        Added INSTALLATION topic to the POD, so we can do
+        pod2text Baby.pm > README
+
+        Revision 1.4  2002/04/26 12:28:56  abigail
+        Added support for 'Swedish chef' and 'Warez' languages.
+
+        Revision 1.3  2002/04/25 23:35:24  abigail
+        Added a check to see whether at least 12 numbers have been passed.
+
+        Revision 1.2  2002/04/25 23:32:06  abigail
+        Get rid of Exporter.
+        Support for Dutch.
+        Customizable format and numbers.
+        PODdified.
+
+        Revision 1.1  2002/04/25 22:14:39  abigail
+        Initial revision
+
+LICENSE
+    This program is copyright 2002 by Abigail.
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+    DEALINGS IN THE SOFTWARE.
 
 INSTALLATION
+    To install this module type the following:
 
-To install this module type the following:
-
-   perl Makefile.PL
-   make
-   make test
-   make install
-
-DEPENDENCIES
-
-This module requires these other modules and libraries:
-
-  blah blah blah
-
-COPYRIGHT AND LICENCE
-
-Put the correct copyright and licence information here.
-
-Copyright (C) 2002 A. U. Thor blah blah blah
+       perl Makefile.PL
+       make
+       make test
+       make install
 
