@@ -20,10 +20,15 @@ DESCRIPTION
     options can be passed:
 
     language LANG
-        The language the time should be told in. Only four languages are
-        currently supported, "en" (for English), "du" (for Dutch), "swedish
-        chef" (for Swedish Chef like time) and "warez" (for l44+ babies). If
-        no language argument is given, English is used.
+        The language the time should be told in. The following languages are
+        currently supported: "en" (for English), "de" (for German), "du"
+        (for Dutch), "fr" (for French), "it" (for Italian), "no" (for
+        Norwegian), "swedish chef" (for Swedish Chef like time) and "warez"
+        (for l44+ babies). If no language argument is given, English is
+        used.
+
+        Note that German and Norwegian use accented letters. The returned
+        sentences are correct for an ISO 8859-1 platform.
 
     format STRING
         This is the format used to represent the time. It will be passed to
@@ -62,6 +67,13 @@ AUTHOR
 
 HISTORY
         $Log: Baby.pm,v $
+        Revision 1.6  2002/05/13 23:06:23  abigail
+        Added support for the following languages:
+            German (de)   (Tim Heaney)
+            French (fr)   (Tim Heaney)
+            Norwegian (no) (Peter J. Acklam)
+            Italian (it)  (Andrea Spinelli)
+
         Revision 1.5  2002/04/26 16:10:49  abigail
         Added INSTALLATION topic to the POD, so we can do
         pod2text Baby.pm > README

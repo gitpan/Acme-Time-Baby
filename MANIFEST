@@ -8,3 +8,7 @@ t/02_custom.t
 t/03_noimport.t
 t/04_chef.t
 t/05_warez.t
+t/06_de.t
+t/07_fr.t
+t/08_no.t
+t/09_it.t

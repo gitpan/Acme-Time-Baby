@@ -1,9 +1,16 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.5 2002/04/26 16:10:49 abigail Exp abigail $
+# $Id: Baby.pm,v 1.6 2002/05/13 23:06:23 abigail Exp abigail $
 #
 # $Log: Baby.pm,v $
+# Revision 1.6  2002/05/13 23:06:23  abigail
+# Added support for the following languages:
+#     German (de)   (Tim Heaney)
+#     French (fr)   (Tim Heaney)
+#     Norwegian (no) (Peter J. Acklam)
+#     Italian (it)  (Andrea Spinelli)
+#
 # Revision 1.5  2002/04/26 16:10:49  abigail
 # Added INSTALLATION topic to the POD, so we can do
 # pod2text Baby.pm > README
@@ -30,7 +37,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.5 $ =~ /([\d.+])/;
+($VERSION)  = q $Revision: 1.6 $ =~ /([\d.+])/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -38,10 +45,32 @@ my %languages = (
                   format  => "The big hand is on the %s " .
                              "and the little hand is on the %s"},
 
+    'de'      => {numbers => [qw /eins zwei drie vier fünf sechs sieben
+                                       acht neun zehn elf zwölf/],
+                  format  => "Der grosse Zeiger ist auf die %s " .
+                             "und der kleine Zeiger ist auf die %s"},
+
     'du'      => {numbers => [qw /een twee drie vier vijf zes zeven
                                       acht negen tien elf twaalf/],
                   format  => "De grote wijzer is op de %s " .
                              "en de kleine wijzer is op de %s"},
+
+    'fr'      => {numbers => [qw /un deux trois quatre cinq six sept
+                                     huit neuf dix onze douze/],
+                  format  => "La grande aiguille est sur le %s " .
+                             "et la petite aiguille est sur le %s"},
+
+    'it'      => {numbers => ['a una', 'e due', 'e tre', 'e quattro',
+                                       'e cinque', 'e sei', 'e sette',
+                                       'e otto', 'e nove', 'e dieci',
+                                       'e undici', 'e dodici'],
+                  format  => "La lancetta lunga e' sull%s " .
+                             "e quella corta e' sull%s"},
+
+    'no'      => {numbers => [qw /en to tre fire fem seks syv
+                                     åtte ni ti elleve tolv/],
+                  format  => "Den store viseren er på %s " .
+                             "og den lille viseren er på %s"},
 
     'swedish chef'
               => {numbers => [qw /one tvu three ffuoor ffeefe six
@@ -147,10 +176,14 @@ options can be passed:
 
 =item language LANG
 
-The language the time should be told in. Only four languages are currently
-supported, C<en> (for English), C<du> (for Dutch), C<swedish chef> (for
-Swedish Chef like time) and C<warez> (for l44+ babies). If no language
-argument is given, English is used.
+The language the time should be told in. The following languages are
+currently supported: C<en> (for English), C<de> (for German), C<du>
+(for Dutch), C<fr> (for French), C<it> (for Italian), C<no> (for
+Norwegian), C<swedish chef> (for Swedish Chef like time) and C<warez>
+(for l44+ babies).  If no language argument is given, English is used.
+
+Note that German and Norwegian use accented letters. The returned 
+sentences are correct for an ISO 8859-1 platform.
 
 =item format STRING
 
@@ -197,6 +230,13 @@ Abigail, I<abigail@foad.org>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.6  2002/05/13 23:06:23  abigail
+    Added support for the following languages:
+        German (de)   (Tim Heaney)
+        French (fr)   (Tim Heaney)
+        Norwegian (no) (Peter J. Acklam)
+        Italian (it)  (Andrea Spinelli)
+
     Revision 1.5  2002/04/26 16:10:49  abigail
     Added INSTALLATION topic to the POD, so we can do
     pod2text Baby.pm > README
