@@ -1,9 +1,15 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 2.100 2003/02/13 13:01:34 abigail Exp $
+# $Id: Baby.pm,v 2.102 2003/02/23 22:26:17 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 2.102  2003/02/23 22:26:17  abigail
+# Pointed to website.
+#
+# Revision 2.101  2003/02/23 22:22:16  abigail
+# Patch for German (Philip Newton)
+#
 # Revision 2.100  2003/02/13 13:01:34  abigail
 # - Upped version to 2.100, to make really sure CPAN updates older
 #   versions of the module.
@@ -69,7 +75,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 2.100 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 2.102 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -84,7 +90,7 @@ my %languages = (
 
     'de'      => {numbers => [qw /Eins Zwei Drie Vier Fünf Sechs Sieben
                                        Acht Neun Zehn Elf Zwölf/],
-                  format  => "Der grosse Zeiger ist auf der %s " .
+                  format  => "Der gro\xDFe Zeiger ist auf der %s " .
                              "und der kleine Zeiger ist auf der %s"},
 
     'du'      => {numbers => [qw /een twee drie vier vijf zes zeven
@@ -284,9 +290,19 @@ Support for more languages.
 
 Abigail, I<acme-time-baby@abigail.nl>.
 
+=head1 SEE ALSO
+
+L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
+
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 2.102  2003/02/23 22:26:17  abigail
+    Pointed to website.
+
+    Revision 2.101  2003/02/23 22:22:16  abigail
+    Patch for German (Philip Newton)
+
     Revision 2.100  2003/02/13 13:01:34  abigail
     - Upped version to 2.100, to make really sure CPAN updates older
       versions of the module.

@@ -20,7 +20,7 @@ my %numbers = map {$_ => ++$i} qw /Eins Zwei Drie Vier Fünf Sechs Sieben
 foreach my $hours (1 .. 24) {
     foreach my $minutes (0 .. 59) {
         my $r = babytime "$hours:$minutes";
-        my ($big)    = $r =~ /grosse Zeiger ist auf der (\S+)/;
+        my ($big)    = $r =~ /gro\xDFe Zeiger ist auf der (\S+)/;
         my ($little) = $r =~ /kleine Zeiger ist auf der (\S+)/;
 
         if (!defined $big || !defined $little) {

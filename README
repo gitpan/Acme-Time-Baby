@@ -76,9 +76,9 @@ AUTHOR
     Abigail, *acme-time-baby@abigail.nl*.
 
 HISTORY
-        $Log: README,v $
-        Revision 1.11  2003/02/13 21:57:39  abigail
-        *** empty log message ***
+        $Log: Baby.pm,v $
+        Revision 2.101  2003/02/23 22:22:16  abigail
+        Patch for German (Philip Newton)
 
         Revision 2.100  2003/02/13 13:01:34  abigail
         - Upped version to 2.100, to make really sure CPAN updates older
