@@ -1,9 +1,12 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.10 2002/08/20 14:40:26 abigail Exp $
+# $Id: Baby.pm,v 1.11 2002/09/09 19:29:01 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 1.11  2002/09/09 19:29:01  abigail
+# Brazilian Portuguese added (Flavio S. Glock)
+#
 # Revision 1.10  2002/08/20 14:40:26  abigail
 # Documented new language (Swedish).
 # Fixed email address.
@@ -56,13 +59,18 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.10 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 1.11 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
                                       eight nine ten eleven twelve/],
                   format  => "The big hand is on the %s " .
                              "and the little hand is on the %s"},
+
+    'br'      => {numbers => [qw /um dois três quatro cinco seis
+                                  sete oito nove dez onze doze/],
+                  format  => "O ponteiro grande está no %s " .
+                             "e o ponteiro pequeno está no %s"},
 
     'de'      => {numbers => [qw /Eins Zwei Drie Vier Fünf Sechs Sieben
                                        Acht Neun Zehn Elf Zwölf/],
@@ -201,13 +209,22 @@ options can be passed:
 =item language LANG
 
 The language the time should be told in. The following languages are
-currently supported: C<en> (for English), C<de> (for German), C<du>
-(for Dutch), C<fr> (for French), C<it> (for Italian), C<no> (for
-Norwegian), C<se> (for Swedish), C<swedish chef> (for Swedish Chef
-like time) and C<warez> (for l44+ babies).
+currently supported:
+
+  en             English (this is the default)
+  br             Brazilian Portuguese.
+  de             German.
+  du             Dutch.
+  fr             French.
+  it             Italian.
+  no             Norwegian.
+  se             Swedish.
+  swedish chef   Swedish Chef (from the Muppets).
+  warez          l44+.
+
 If no language argument is given, English is used.
 
-Note that German and Norwegian use accented letters. The returned 
+Note that some languages use accented letters. The returned 
 sentences are correct for an ISO 8859-1 platform.
 
 =item format STRING
@@ -255,6 +272,9 @@ Abigail, I<acme-time-baby@abigail.nl>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.11  2002/09/09 19:29:01  abigail
+    Brazilian Portuguese added (Flavio S. Glock)
+
     Revision 1.10  2002/08/20 14:40:26  abigail
     Documented new language (Swedish).
     Fixed email address.

@@ -21,13 +21,22 @@ DESCRIPTION
 
     language LANG
         The language the time should be told in. The following languages are
-        currently supported: "en" (for English), "de" (for German), "du"
-        (for Dutch), "fr" (for French), "it" (for Italian), "no" (for
-        Norwegian), "se" (for Swedish), "swedish chef" (for Swedish Chef
-        like time) and "warez" (for l44+ babies). If no language argument is
-        given, English is used.
+        currently supported:
 
-        Note that German and Norwegian use accented letters. The returned
+          en             English (this is the default)
+          br             Brazilian Portuguese.
+          de             German.
+          du             Dutch.
+          fr             French.
+          it             Italian.
+          no             Norwegian.
+          se             Swedish.
+          swedish chef   Swedish Chef (from the Muppets).
+          warez          l44+.
+
+        If no language argument is given, English is used.
+
+        Note that some languages use accented letters. The returned
         sentences are correct for an ISO 8859-1 platform.
 
     format STRING
@@ -66,7 +75,13 @@ AUTHOR
     Abigail, *acme-time-baby@abigail.nl*.
 
 HISTORY
-        $Log: Baby.pm,v $
+        $Log: README,v $
+        Revision 1.9  2002/09/09 19:33:14  abigail
+        New version
+
+        Revision 1.11  2002/09/09 19:29:01  abigail
+        Brazilian Portuguese added (Flavio S. Glock)
+
         Revision 1.10  2002/08/20 14:40:26  abigail
         Documented new language (Swedish).
         Fixed email address.
