@@ -1,9 +1,13 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 2.105 2003/11/24 21:27:01 abigail Exp $
+# $Id: Baby.pm,v 2.106 2004/11/01 23:39:27 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 2.106  2004/11/01 23:39:27  abigail
+# - Added Swiss German (de_ch). (Gerry Weirich)
+# - 20177 tests in 15 files.
+#
 # Revision 2.105  2003/11/24 21:27:01  abigail
 # And documented it.
 #
@@ -84,7 +88,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 2.105 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 2.106 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -107,6 +111,11 @@ my %languages = (
                                        Acht Neun Zehn Elf Zwölf/],
                   format  => "Der gro\xDFe Zeiger ist auf der %s " .
                              "und der kleine Zeiger ist auf der %s"},
+
+    'de_ch'   => {numbers => [qw /eis zwöi  drü  vieri föifi sächsi sibni
+                                      achti nüni zäni  elfi  zwölfi/],
+                  format  => "De gross zeiger isch uf em %s " .
+                             "und de chlii zeiger isch uf em %s"},
 
     'du'      => {numbers => [qw /een twee drie vier vijf zes zeven
                                       acht negen tien elf twaalf/],
@@ -250,6 +259,7 @@ currently supported:
   br             Brazilian Portuguese.
   ceb            Cebuano (Filipine dialect)
   de             German.
+  de_ch          Swiss German.
   du             Dutch.
   es             Spanish.
   fr             French.
@@ -313,6 +323,10 @@ L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 2.106  2004/11/01 23:39:27  abigail
+    - Added Swiss German (de_ch). (Gerry Weirich)
+    - 20177 tests in 15 files.
+
     Revision 2.105  2003/11/24 21:27:01  abigail
     And documented it.
 
@@ -388,7 +402,7 @@ L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 
 =head1 LICENSE
 
-This program is copyright 2002 - 2003 by Abigail.
+This program is copyright 2002 - 2004 by Abigail.
  
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

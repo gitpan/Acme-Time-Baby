@@ -16,4 +16,5 @@ t/10_se.t
 t/11_br.t
 t/12_es.t
 t/13_ceb.t
+t/14_de_ch.t
 META.yml                                 Module meta-data (added by MakeMaker)
