@@ -67,6 +67,10 @@ AUTHOR
 
 HISTORY
         $Log: Baby.pm,v $
+        Revision 1.7  2002/05/15 11:37:39  abigail
+        Fixed regex extracting version number from RCS Revision line.
+        (Tim Heaney)
+
         Revision 1.6  2002/05/13 23:06:23  abigail
         Added support for the following languages:
             German (de)   (Tim Heaney)

@@ -1,9 +1,13 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.6 2002/05/13 23:06:23 abigail Exp abigail $
+# $Id: Baby.pm,v 1.7 2002/05/15 11:37:39 abigail Exp abigail $
 #
 # $Log: Baby.pm,v $
+# Revision 1.7  2002/05/15 11:37:39  abigail
+# Fixed regex extracting version number from RCS Revision line.
+# (Tim Heaney)
+#
 # Revision 1.6  2002/05/13 23:06:23  abigail
 # Added support for the following languages:
 #     German (de)   (Tim Heaney)
@@ -37,7 +41,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.6 $ =~ /([\d.+])/;
+($VERSION)  = q $Revision: 1.7 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -230,6 +234,10 @@ Abigail, I<abigail@foad.org>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.7  2002/05/15 11:37:39  abigail
+    Fixed regex extracting version number from RCS Revision line.
+    (Tim Heaney)
+
     Revision 1.6  2002/05/13 23:06:23  abigail
     Added support for the following languages:
         German (de)   (Tim Heaney)
