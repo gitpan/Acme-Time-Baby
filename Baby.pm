@@ -1,9 +1,15 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.12 2002/12/13 16:26:03 abigail Exp $
+# $Id: Baby.pm,v 2.100 2003/02/13 13:01:34 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 2.100  2003/02/13 13:01:34  abigail
+# - Upped version to 2.100, to make really sure CPAN updates older
+#   versions of the module.
+# - Added Spanish. (Nick Tonkin)
+# - 17295 tests in 13 files.
+#
 # Revision 1.12  2002/12/13 16:26:03  abigail
 # Nothing really, just generating a new version.
 # Bloody CPAN/PAUSE doesn't think 1.11 is larger than 1.7.
@@ -63,7 +69,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.12 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 2.100 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -72,7 +78,7 @@ my %languages = (
                              "and the little hand is on the %s"},
 
     'br'      => {numbers => [qw /um dois três quatro cinco seis
-                                  sete oito nove dez onze doze/],
+                                     sete oito nove dez onze doze/],
                   format  => "O ponteiro grande está no %s " .
                              "e o ponteiro pequeno está no %s"},
 
@@ -85,6 +91,11 @@ my %languages = (
                                       acht negen tien elf twaalf/],
                   format  => "De grote wijzer is op de %s " .
                              "en de kleine wijzer is op de %s"},
+
+    'es'      => {numbers => [qw /uno dos tres cuatro cinco seis siete
+                                      ocho nueve diez once doce/],
+                  format  => "La manecilla grande está sobre el %s " .
+                             "y la manecilla pequeña está sobre el %s"},
 
     'fr'      => {numbers => [qw /un deux trois quatre cinq six sept
                                      huit neuf dix onze douze/],
@@ -110,12 +121,12 @@ my %languages = (
 
     'swedish chef'
               => {numbers => [qw /one tvu three ffuoor ffeefe six
-                                  sefen eight nine ten elefen tvelfe/],
+                                      sefen eight nine ten elefen tvelfe/],
                   format  => "Zee beeg hund is un zee %s und zee little " .
                              "hund is un zee %s. Bork, bork, bork!"},
 
     'warez'   => {numbers => [qw {()nE TW0 7HR3e f0uR f|ve 5ix 
-                                  ZE\/3n E|6hT n1nE TeN 3L3v3gn 7wELv3}],
+                                       ZE\/3n E|6hT n1nE TeN 3L3v3gn 7wELv3}],
                   format  => 'T|-|3 bIG h4|\||) Yz 0n thE %s ' .
                              'and 7|-|3 lIttlE |-|aND |S 0|\| Th3 %s'},
 
@@ -218,6 +229,7 @@ currently supported:
   br             Brazilian Portuguese.
   de             German.
   du             Dutch.
+  es             Spanish.
   fr             French.
   it             Italian.
   no             Norwegian.
@@ -275,6 +287,12 @@ Abigail, I<acme-time-baby@abigail.nl>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 2.100  2003/02/13 13:01:34  abigail
+    - Upped version to 2.100, to make really sure CPAN updates older
+      versions of the module.
+    - Added Spanish. (Nick Tonkin)
+    - 17295 tests in 13 files.
+
     Revision 1.12  2002/12/13 16:26:03  abigail
     Nothing really, just generating a new version.
     Bloody CPAN/PAUSE doesn't think 1.11 is larger than 1.7.

@@ -27,6 +27,7 @@ DESCRIPTION
           br             Brazilian Portuguese.
           de             German.
           du             Dutch.
+          es             Spanish.
           fr             French.
           it             Italian.
           no             Norwegian.
@@ -75,6 +76,16 @@ AUTHOR
     Abigail, *acme-time-baby@abigail.nl*.
 
 HISTORY
+        $Log: README,v $
+        Revision 1.11  2003/02/13 21:57:39  abigail
+        *** empty log message ***
+
+        Revision 2.100  2003/02/13 13:01:34  abigail
+        - Upped version to 2.100, to make really sure CPAN updates older
+          versions of the module.
+        - Added Spanish. (Nick Tonkin)
+        - 17295 tests in 13 files.
+
         Revision 1.12  2002/12/13 16:26:03  abigail
         Nothing really, just generating a new version.
         Bloody CPAN/PAUSE doesn't think 1.11 is larger than 1.7.
