@@ -6,3 +6,5 @@ t/00_en.t
 t/01_du.t
 t/02_custom.t
 t/03_noimport.t
+t/04_chef.t
+t/05_warez.t

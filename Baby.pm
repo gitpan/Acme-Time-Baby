@@ -1,9 +1,12 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.3 2002/04/25 23:35:24 abigail Exp abigail $
+# $Id: Baby.pm,v 1.4 2002/04/26 12:28:56 abigail Exp abigail $
 #
 # $Log: Baby.pm,v $
+# Revision 1.4  2002/04/26 12:28:56  abigail
+# Added support for 'Swedish chef' and 'Warez' languages.
+#
 # Revision 1.3  2002/04/25 23:35:24  abigail
 # Added a check to see whether at least 12 numbers have been passed.
 #
@@ -23,7 +26,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.3 $ =~ /([\d.+])/;
+($VERSION)  = q $Revision: 1.4 $ =~ /([\d.+])/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -34,7 +37,19 @@ my %languages = (
     'du'      => {numbers => [qw /een twee drie vier vijf zes zeven
                                       acht negen tien elf twaalf/],
                   format  => "De grote wijzer is op de %s " .
-                             "en de kleine wijzer is op de %s"}
+                             "en de kleine wijzer is op de %s"},
+
+    'swedish chef'
+              => {numbers => [qw /one tvu three ffuoor ffeefe six
+                                  sefen eight nine ten elefen tvelfe/],
+                  format  => "Zee beeg hund is un zee %s und zee little " .
+                             "hund is un zee %s. Bork, bork, bork!"},
+
+    'warez'   => {numbers => [qw {()nE TW0 7HR3e f0uR f|ve 5ix 
+                                  ZE\/3n E|6hT n1nE TeN 3L3v3gn 7wELv3}],
+                  format  => 'T|-|3 bIG h4|\||) Yz 0n thE %s ' .
+                             'and 7|-|3 lIttlE |-|aND |S 0|\| Th3 %s'},
+
 );
 
 my @numbers = @{$languages {en} {numbers}};
@@ -128,8 +143,9 @@ options can be passed:
 
 =item language LANG
 
-The language the time should be told in. Only two languages are currently
-supported, C<en> (for English) and C<du> (for Dutch). If no language
+The language the time should be told in. Only four languages are currently
+supported, C<en> (for English), C<du> (for Dutch), C<swedish chef> (for
+Swedish Chef like time) and C<warez> (for l44+ babies). If no language
 argument is given, English is used.
 
 =item format STRING
@@ -177,6 +193,9 @@ Abigail, I<abigail@foad.org>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.4  2002/04/26 12:28:56  abigail
+    Added support for 'Swedish chef' and 'Warez' languages.
+
     Revision 1.3  2002/04/25 23:35:24  abigail
     Added a check to see whether at least 12 numbers have been passed.
 
