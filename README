@@ -75,8 +75,17 @@ TODO
 AUTHOR
     Abigail, *acme-time-baby@abigail.nl*.
 
+SEE ALSO
+    <http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
+
 HISTORY
         $Log: Baby.pm,v $
+        Revision 2.103  2003/02/25 10:54:06  abigail
+        Another German patch (Philip Newton)
+
+        Revision 2.102  2003/02/23 22:26:17  abigail
+        Pointed to website.
+
         Revision 2.101  2003/02/23 22:22:16  abigail
         Patch for German (Philip Newton)
 

@@ -1,9 +1,12 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 2.102 2003/02/23 22:26:17 abigail Exp $
+# $Id: Baby.pm,v 2.103 2003/02/25 10:54:06 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 2.103  2003/02/25 10:54:06  abigail
+# Another German patch (Philip Newton)
+#
 # Revision 2.102  2003/02/23 22:26:17  abigail
 # Pointed to website.
 #
@@ -75,7 +78,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 2.102 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 2.103 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -88,7 +91,7 @@ my %languages = (
                   format  => "O ponteiro grande está no %s " .
                              "e o ponteiro pequeno está no %s"},
 
-    'de'      => {numbers => [qw /Eins Zwei Drie Vier Fünf Sechs Sieben
+    'de'      => {numbers => [qw /Eins Zwei Drei Vier Fünf Sechs Sieben
                                        Acht Neun Zehn Elf Zwölf/],
                   format  => "Der gro\xDFe Zeiger ist auf der %s " .
                              "und der kleine Zeiger ist auf der %s"},
@@ -297,6 +300,9 @@ L<http://perl.abigail.nl/Modules/Acme-Time-Baby/>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 2.103  2003/02/25 10:54:06  abigail
+    Another German patch (Philip Newton)
+
     Revision 2.102  2003/02/23 22:26:17  abigail
     Pointed to website.
 

@@ -14,7 +14,7 @@ ok(1); # If we made it this far, we're ok.
 #########################
 
 my $i = 0;
-my %numbers = map {$_ => ++$i} qw /Eins Zwei Drie Vier Fünf Sechs Sieben
+my %numbers = map {$_ => ++$i} qw /Eins Zwei Drei Vier Fünf Sechs Sieben
                                    Acht Neun Zehn Elf Zwölf/;
 
 foreach my $hours (1 .. 24) {
