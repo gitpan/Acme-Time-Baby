@@ -1,9 +1,13 @@
 package Acme::Time::Baby;
 
 #
-# $Id: Baby.pm,v 1.11 2002/09/09 19:29:01 abigail Exp $
+# $Id: Baby.pm,v 1.12 2002/12/13 16:26:03 abigail Exp $
 #
 # $Log: Baby.pm,v $
+# Revision 1.12  2002/12/13 16:26:03  abigail
+# Nothing really, just generating a new version.
+# Bloody CPAN/PAUSE doesn't think 1.11 is larger than 1.7.
+#
 # Revision 1.11  2002/09/09 19:29:01  abigail
 # Brazilian Portuguese added (Flavio S. Glock)
 #
@@ -59,7 +63,7 @@ use warnings qw /all/;
 
 use vars qw /$VERSION/;
 
-($VERSION)  = q $Revision: 1.11 $ =~ /([\d.]+)/;
+($VERSION)  = q $Revision: 1.12 $ =~ /([\d.]+)/;
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -173,7 +177,6 @@ sub babytime {
     sprintf $format => @numbers [$minutes, $hours];
 }
 
-
 1;
 
 __END__
@@ -272,6 +275,10 @@ Abigail, I<acme-time-baby@abigail.nl>.
 =head1 HISTORY
 
     $Log: Baby.pm,v $
+    Revision 1.12  2002/12/13 16:26:03  abigail
+    Nothing really, just generating a new version.
+    Bloody CPAN/PAUSE doesn't think 1.11 is larger than 1.7.
+
     Revision 1.11  2002/09/09 19:29:01  abigail
     Brazilian Portuguese added (Flavio S. Glock)
 
