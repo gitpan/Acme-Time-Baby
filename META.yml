@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Acme-Time-Baby
-version:            2009122001
+version:            2010020101
 abstract:           Tell time little children can understand
 author:
     - Abigail <acme-time-baby@abigail.be>
@@ -21,7 +21,7 @@ no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.55_02
+generated_by:       ExtUtils::MakeMaker version 6.56
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
@@ -29,5 +29,5 @@ keywords:
     - Time
     - Clock
 test_requires:
-    Test:       0
-    Test::Pod:  1
+    Test:        0
+    Test::More:  0
