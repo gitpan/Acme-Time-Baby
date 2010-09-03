@@ -6,7 +6,7 @@ no  warnings 'syntax';
 
 use vars qw /$VERSION/;
 
-our $VERSION  = '2010020101';
+our $VERSION  = '2010090301';
 
 my %languages = (
     'en'      => {numbers => [qw /one two three four five six seven
@@ -145,8 +145,7 @@ sub babytime {
     $minutes   = sprintf "%.0f" => $minutes / 5;
     $minutes ||= 12;
 
-    local $[ = 1;
-    sprintf $format => @numbers [$minutes, $hours];
+    sprintf $format => @numbers [$minutes - 1, $hours - 1];
 }
 
 1;

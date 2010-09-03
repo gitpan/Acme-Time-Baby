@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Acme-Time-Baby
-version:            2010020101
+version:            2010090301
 abstract:           Tell time little children can understand
 author:
     - Abigail <acme-time-baby@abigail.be>

@@ -1,3 +1,6 @@
+Version 2010090301 Fri Sep  3 19:34:22 CEST 2010
++ Remove use of $[ - this is deprecated.
+
 Version 2010020101 Mon Feb  1 23:04:22 CET 2010
 + Croation language, thanks to Slaven Rezic.
 
